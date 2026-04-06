@@ -1,0 +1,5 @@
+{
+  "comment": "Monday.com now uses a remote MCP server — no JSON config needed. Run:",
+  "command": "claude mcp add monday --transport http https://mcp.monday.com/mcp --scope user:YOUR_USER_ID",
+  "instructions": "Find your user ID at monday.com → Avatar → My profile → copy the number from the URL (e.g. https://dialpad.monday.com/users/12345678)"
+}

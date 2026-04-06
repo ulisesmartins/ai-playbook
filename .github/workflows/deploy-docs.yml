@@ -1,0 +1,57 @@
+name: Deploy Docs
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install MkDocs Material
+        run: pip install -r requirements-docs.txt
+
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Auto-generate index pages and directory
+        run: |
+          DOCS_DIR="$(pwd)" python scripts/generate-indexes.py
+
+      - name: Cache-bust JS/CSS with commit SHA
+        run: |
+          SHORT_SHA=$(git rev-parse --short HEAD)
+          sed -i "s/?v=[a-zA-Z0-9_-]*/?v=${SHORT_SHA}/g" mkdocs.yml
+          echo "Cache buster set to: ${SHORT_SHA}"
+
+      - name: Build site and check links
+        run: |
+          DOCS_DIR="$(pwd)"
+          sed -e "s|^docs_dir:.*|docs_dir: ${DOCS_DIR}|" \
+              -e "s|custom_dir: overrides|custom_dir: ${DOCS_DIR}/overrides|" \
+              mkdocs.yml > /tmp/mkdocs-ci.yml
+          mkdocs build --config-file /tmp/mkdocs-ci.yml --site-dir /tmp/mkdocs-site
+          python scripts/check-links.py /tmp/mkdocs-site
+
+      - name: Deploy to GitHub Pages
+        run: |
+          DOCS_DIR="$(pwd)"
+          sed -e "s|^docs_dir:.*|docs_dir: ${DOCS_DIR}|" \
+              -e "s|custom_dir: overrides|custom_dir: ${DOCS_DIR}/overrides|" \
+              mkdocs.yml > /tmp/mkdocs-ci.yml
+          mkdocs gh-deploy --config-file /tmp/mkdocs-ci.yml --force --remote-branch gh-pages

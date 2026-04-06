@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "glean": {
+      "command": "npx",
+      "args": ["-y", "@gleanwork/local-mcp-server"],
+      "env": {
+        "GLEAN_SERVER_URL": "https://dialpad-be.glean.com"
+      }
+    }
+  }
+}

@@ -1,0 +1,191 @@
+site_name: Dialpad AI Playbook
+site_description: Shared AI playbook for Dialpad — prompts, skills, agents, templates, and workflows for Product Managers and all Dialpad employees.
+site_url: https://dialpad.github.io/ai-playbook/
+repo_url: https://github.com/dialpad/ai-playbook
+repo_name: dialpad/ai-playbook
+docs_dir: .
+edit_uri: edit/master/
+
+extra_css:
+  - stylesheets/extra.css?v=7
+
+extra_javascript:
+  - stylesheets/role-filter.js?v=7
+  - javascripts/extra.js?v=7
+
+theme:
+  name: material
+  custom_dir: overrides
+  font:
+    text: DM Sans
+    code: JetBrains Mono
+  palette:
+    scheme: default
+    primary: custom
+    accent: custom
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - navigation.top
+    - navigation.indexes
+    - navigation.footer
+    - toc.follow
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.action.edit
+    - content.action.view
+    - content.tooltips
+  icon:
+    logo: material/star-four-points
+    repo: fontawesome/brands/github
+    edit: material/pencil
+    view: material/eye
+
+plugins:
+  - search
+
+markdown_extensions:
+  - tables
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - admonition
+  - pymdownx.details
+
+exclude_docs: |
+  .gitignore
+  mkdocs.yml
+  requirements-docs.txt
+  .github/
+  .claude/
+  memory/
+  **/*.sh
+  **/*.json
+  **/*.py
+  scripts/
+  overrides/
+  **/.gitkeep
+
+nav:
+  - Home: index.md
+  - Start:
+    - Overview: 00_getting-started/
+    - AI Mindset: 00_getting-started/DP-General-ai-mindset.md
+    - Tools & Landscape: 00_getting-started/DP-General-tools-and-landscape.md
+    - Dev Environment: 00_getting-started/DP-General-dev-environment-setup.md
+    - Terminal Basics: 00_getting-started/DP-General-terminal-basics.md
+    - GitHub Overview: 00_getting-started/DP-General-github-overview.md
+    - AI Agent Best Practices: 00_getting-started/DP-General-ai-agent-best-practices.md
+  - Directory: directory.md
+  - Context:
+    - Company: 01_context/company/
+    - Product Areas: 01_context/product-areas/
+    - PDLC: 01_context/pdlc/
+    - Personas & ICPs: 01_context/personas-and-icps/
+    - Design System: 01_context/design-system/
+    - Codebase Map: 01_context/codebase-map/
+  - Templates:
+    - PM: 02_templates/pm/
+    - UI: 02_templates/ui/
+    - Cross-functional: 02_templates/cross-functional/
+  - Skills:
+    - PM: 03_skills/pm/
+    - UI: 03_skills/ui/
+    - Coding: 03_skills/coding/
+    - Cross-functional: 03_skills/cross-functional/
+  - Agents:
+    - PM: 04_agents/pm/
+    - UI: 04_agents/ui/
+    - Coding: 04_agents/coding/
+    - Cross-functional: 04_agents/cross-functional/
+  - Prompts:
+    - PM: 05_prompts/pm/
+    - UI: 05_prompts/ui/
+    - Coding: 05_prompts/coding/
+  - Cowork:
+    - Overview: 06_cowork-plugins/DP-General-cowork-overview.md
+    - Start: 06_cowork-plugins/DP-General-cowork-getting-started.md
+    - PM: 06_cowork-plugins/pm/
+    - UI: 06_cowork-plugins/ui/
+    - Coding: 06_cowork-plugins/coding/
+    - Cross-functional: 06_cowork-plugins/cross-functional/
+  - Examples:
+    - Overview: 07_examples/
+    - PM:
+      - 07_examples/pm/
+      - PRD Examples:
+        - 07_examples/pm/prd-examples/
+        - AI Coaching Summary: 07_examples/pm/prd-examples/DP-PM-prd-ai-coaching-summary.md
+        - Concurrent Licensing Login Gate: 07_examples/pm/prd-examples/Support-PM-prd-concurrent-licensing-login-gate.md
+      - GTM Brief Examples:
+        - 07_examples/pm/gtm-examples/
+        - AI Coaching Summary: 07_examples/pm/gtm-examples/DP-PM-gtm-ai-coaching-summary.md
+    - UI: 07_examples/ui/
+    - Coding: 07_examples/coding/
+    - Cross-functional: 07_examples/cross-functional/
+  - Tools:
+    - PM: 08_tools/pm/
+    - UI: 08_tools/ui/
+    - Coding: 08_tools/coding/
+    - Cross-functional: 08_tools/cross-functional/
+    - Best Practices: 08_tools/best-practices/
+    - Pilot Shell: 08_tools/best-practices/DP-General-pilot-shell.md
+  - MCPs:
+    - Setup Guides: 09_mcps/guides/
+    - Atlassian: 09_mcps/guides/DP-General-atlassian-setup.md
+    - GitHub: 09_mcps/guides/DP-General-github-setup.md
+    - Design Studio: 09_mcps/guides/DP-General-design-studio-setup.md
+    - Glean: 09_mcps/guides/DP-General-glean-setup.md
+    - Amplitude: 09_mcps/guides/DP-General-amplitude-setup.md
+    - Google Drive: 09_mcps/guides/DP-General-google-drive-setup.md
+    - Gmail: 09_mcps/guides/DP-General-gmail-setup.md
+    - Google Calendar: 09_mcps/guides/DP-General-google-calendar-setup.md
+    - Google BigQuery: 09_mcps/guides/DP-General-google-bigquery-setup.md
+    - Monday.com: 09_mcps/guides/DP-General-monday-setup.md
+    - Dialtone: 09_mcps/guides/DP-General-dialtone-setup.md
+    - Playwright: 09_mcps/guides/DP-General-playwright-setup.md
+  - Hooks:
+    - Overview: 10_hooks/
+    - PM:
+      - 10_hooks/pm/
+      - Auto-Save PRD: 10_hooks/pm/DP-General-auto-save-prd.md
+      - JIRA Push: 10_hooks/pm/DP-General-jira-push.md
+    - Coding:
+      - 10_hooks/coding/
+      - Lint on Edit: 10_hooks/coding/DP-General-lint-on-edit.md
+      - Test Feedback: 10_hooks/coding/DP-General-test-feedback.md
+    - UI:
+      - 10_hooks/ui/
+      - Figma Export: 10_hooks/ui/DP-General-figma-export.md
+    - Cross-functional:
+      - 10_hooks/cross-functional/
+      - Notify Slack: 10_hooks/cross-functional/DP-General-notify-slack.md
+  - UI Toolkit:
+    - Overview: 11_ui/
+    - Figma at Dialpad: 11_ui/DP-Design-figma-101.md
+    - Jira for Product Design: 11_ui/DP-Design-jira-for-product-design.md
+    - UX Heuristics: 11_ui/DP-Design-ux-heuristics.md
+    - Research Tools: 11_ui/DP-Design-research-tools.md
+    - Content Design: 11_ui/DP-Design-content-design.md
+    - Resources for Managers: 11_ui/DP-Design-resources-for-managers.md
+    - Design Tools Repo: 11_ui/DP-Design-design-tools-repo.md
+    - Git & GitHub: 11_ui/DP-Design-git-github-guide.md
+    - Designer Resources: 11_ui/DP-Design-product-designer-resources.md
+    - Design Tenets: 11_ui/DP-Design-design-tenets.md
+  - Contributing: contributing.md
+  - What's New: whats-new.md

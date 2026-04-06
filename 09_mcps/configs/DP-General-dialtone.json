@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "dialtone": {
+      "command": "npx",
+      "args": ["-y", "@dialpad/dialtone-mcp-server"]
+    }
+  }
+}

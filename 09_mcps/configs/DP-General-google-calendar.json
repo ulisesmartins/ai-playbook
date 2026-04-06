@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "google-calendar": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-google-calendar"],
+      "env": {
+        "GCAL_CLIENT_ID": "your-oauth-client-id-here",
+        "GCAL_CLIENT_SECRET": "your-oauth-client-secret-here",
+        "GCAL_REFRESH_TOKEN": "your-refresh-token-here"
+      }
+    }
+  }
+}

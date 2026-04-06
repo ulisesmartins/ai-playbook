@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "google-drive": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-gdrive"],
+      "env": {
+        "GDRIVE_CLIENT_ID": "your-oauth-client-id-here",
+        "GDRIVE_CLIENT_SECRET": "your-oauth-client-secret-here",
+        "GDRIVE_REFRESH_TOKEN": "your-refresh-token-here"
+      }
+    }
+  }
+}
