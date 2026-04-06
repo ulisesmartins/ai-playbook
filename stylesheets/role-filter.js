@@ -57,7 +57,7 @@
     var idx = path.search(/(?:0[0-9]|1[0-9])_/);
     if (idx > 0) return path.substring(0, idx);
     /* Strip known root-level page slugs */
-    var slugs = ['directory/', 'contributing/', 'whats-new/'];
+    var slugs = ['directory/', 'contributing/', 'whats-new/', 'CLAUDE/'];
     for (var i = 0; i < slugs.length; i++) {
       idx = path.indexOf(slugs[i]);
       if (idx > 0) return path.substring(0, idx);
