@@ -1,8 +1,8 @@
 site_name: Dialpad AI Playbook
 site_description: Shared AI playbook for Dialpad — prompts, skills, agents, templates, and workflows for Product Managers and all Dialpad employees.
-site_url: https://dialpad.github.io/ai-playbook/
-repo_url: https://github.com/dialpad/ai-playbook
-repo_name: dialpad/ai-playbook
+site_url: https://ulisesmartins.github.io/ai-playbook/
+repo_url: https://github.com/ulisesmartins/ai-playbook
+repo_name: ulisesmartins/ai-playbook
 docs_dir: .
 edit_uri: edit/master/
 
