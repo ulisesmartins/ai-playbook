@@ -17,7 +17,7 @@ The content is organized into the following areas:
 
     Our primary design tool — access, libraries, training, and project templates.
 
-    [:octicons-arrow-right-24: Figma guide](DP-UI-figma-101.md)
+    [:octicons-arrow-right-24: Figma guide](DP-Design-figma-101.md)
 
 -   :material-clipboard-check-outline:{ .lg .middle } **Jira for Product UI**
 
@@ -25,7 +25,7 @@ The content is organized into the following areas:
 
     How the UI team uses Jira for project management, Kanban boards, and workflows.
 
-    [:octicons-arrow-right-24: Jira guide](DP-UI-jira-for-product-design.md)
+    [:octicons-arrow-right-24: Jira guide](DP-Design-jira-for-product-design.md)
 
 -   :material-star-check-outline:{ .lg .middle } **UX Heuristics & Scorecards**
 
@@ -33,7 +33,7 @@ The content is organized into the following areas:
 
     Heuristic evaluation framework, scoring rubric, and UX scorecard templates.
 
-    [:octicons-arrow-right-24: UX heuristics](DP-UI-ux-heuristics.md)
+    [:octicons-arrow-right-24: UX heuristics](DP-Design-ux-heuristics.md)
 
 -   :material-flask-outline:{ .lg .middle } **Research Tools**
 
@@ -41,7 +41,7 @@ The content is organized into the following areas:
 
     Tools and software available for conducting user research at Dialpad.
 
-    [:octicons-arrow-right-24: Research tools](DP-UI-research-tools.md)
+    [:octicons-arrow-right-24: Research tools](DP-Design-research-tools.md)
 
 -   :material-pencil-ruler:{ .lg .middle } **Content UI**
 
@@ -49,7 +49,7 @@ The content is organized into the following areas:
 
     Resources for designing content for Dialpad UI — guidelines, GPTs, and principles.
 
-    [:octicons-arrow-right-24: Content design](DP-UI-content-design.md)
+    [:octicons-arrow-right-24: Content design](DP-Design-content-design.md)
 
 -   :material-account-supervisor-outline:{ .lg .middle } **Resources for UI Managers**
 
@@ -57,7 +57,7 @@ The content is organized into the following areas:
 
     Centralized toolkit for UI Managers — reviews, onboarding, leveling, and processes.
 
-    [:octicons-arrow-right-24: Manager resources](DP-UI-resources-for-managers.md)
+    [:octicons-arrow-right-24: Manager resources](DP-Design-resources-for-managers.md)
 
 -   :material-wrench-outline:{ .lg .middle } **UI Tools Repository**
 
@@ -65,7 +65,7 @@ The content is organized into the following areas:
 
     The design-tools monorepo — CSS Converter, Claude Skills, AI agents, and more.
 
-    [:octicons-arrow-right-24: UI tools](DP-UI-design-tools-repo.md)
+    [:octicons-arrow-right-24: UI tools](DP-Design-design-tools-repo.md)
 
 -   :material-source-branch:{ .lg .middle } **Git & GitHub for Designers**
 
@@ -73,7 +73,7 @@ The content is organized into the following areas:
 
     From first-time setup to merge conflicts — a complete Git guide for designers.
 
-    [:octicons-arrow-right-24: Git guide](DP-UI-git-github-guide.md)
+    [:octicons-arrow-right-24: Git guide](DP-Design-git-github-guide.md)
 
 -   :material-robot-outline:{ .lg .middle } **Resources for Product Designers**
 
@@ -81,7 +81,7 @@ The content is organized into the following areas:
 
     AI agents, NotebookLMs, utilities, sandboxes, and documentation for designers.
 
-    [:octicons-arrow-right-24: Designer resources](DP-UI-product-designer-resources.md)
+    [:octicons-arrow-right-24: Designer resources](DP-Design-product-designer-resources.md)
 
 -   :material-compass-outline:{ .lg .middle } **UI Tenets Framework**
 
@@ -89,7 +89,7 @@ The content is organized into the following areas:
 
     Seven decisive rules for making consistent trade-off decisions across the UI team.
 
-    [:octicons-arrow-right-24: UI tenets](DP-UI-design-tenets.md)
+    [:octicons-arrow-right-24: UI tenets](DP-Design-design-tenets.md)
 
 </div>
 
