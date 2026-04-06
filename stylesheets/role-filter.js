@@ -51,15 +51,18 @@
   /* ── Detect site base path (e.g. "/ai-playbook/") ── */
 
   function getBase() {
-    /* The site logo/title link always resolves to the site root */
-    var logo = document.querySelector('a.md-header__button');
-    if (logo) {
-      try { return new URL(logo.href).pathname.replace(/\/?$/, '/'); } catch (e) {}
-    }
-    /* Fallback: strip known section patterns from the current path */
     var path = window.location.pathname;
-    var m = path.match(/^(.*?\/?)(?:(?:0[0-9]|1[0-9])_)/);
-    if (m) return m[1];
+    /* Strip everything from the first numbered section directory onward
+       e.g. /ai-playbook/00_getting-started/… → /ai-playbook/ */
+    var idx = path.search(/(?:0[0-9]|1[0-9])_/);
+    if (idx > 0) return path.substring(0, idx);
+    /* Strip known root-level page slugs */
+    var slugs = ['directory/', 'contributing/', 'whats-new/'];
+    for (var i = 0; i < slugs.length; i++) {
+      idx = path.indexOf(slugs[i]);
+      if (idx > 0) return path.substring(0, idx);
+    }
+    /* Homepage — path is already the base */
     return path.replace(/\/?$/, '/');
   }
 
