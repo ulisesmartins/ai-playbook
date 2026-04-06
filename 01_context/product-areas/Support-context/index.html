@@ -1,0 +1,4329 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Shared AI playbook for Dialpad — prompts, skills, agents, templates, and workflows for Product Managers and all Dialpad employees.">
+      
+      
+      
+        <link rel="canonical" href="https://ulisesmartins.github.io/ai-playbook/01_context/product-areas/Support-context/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.14">
+    
+    
+      
+        <title>Support Core Area — Grounding Context - Dialpad AI Playbook</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.fad675c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM+Sans:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"DM Sans";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css?v=83e5e27">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#support-core-area-grounding-context" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Dialpad AI Playbook" class="md-header__button md-logo" aria-label="Dialpad AI Playbook" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 1 9 9l-8 3 8 3 3 8 3-8 8-3-8-3-3-8Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Dialpad AI Playbook
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Support Core Area — Grounding Context
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ulisesmartins/ai-playbook" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ulisesmartins/ai-playbook
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../00_getting-started/" class="md-tabs__link">
+          
+  
+    
+  
+  Start
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../directory/" class="md-tabs__link">
+        
+  
+    
+  
+  Directory
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../company/" class="md-tabs__link">
+          
+  
+    
+  
+  Context
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../02_templates/pm/" class="md-tabs__link">
+          
+  
+    
+  
+  Templates
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../03_skills/pm/" class="md-tabs__link">
+          
+  
+    
+  
+  Skills
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../04_agents/pm/" class="md-tabs__link">
+          
+  
+    
+  
+  Agents
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../05_prompts/pm/" class="md-tabs__link">
+          
+  
+    
+  
+  Prompts
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../06_cowork-plugins/DP-General-cowork-overview/" class="md-tabs__link">
+          
+  
+    
+  
+  Cowork
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../07_examples/" class="md-tabs__link">
+          
+  
+    
+  
+  Examples
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../08_tools/pm/" class="md-tabs__link">
+          
+  
+    
+  
+  Tools
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../09_mcps/guides/" class="md-tabs__link">
+          
+  
+    
+  
+  MCPs
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../10_hooks/" class="md-tabs__link">
+          
+  
+    
+  
+  Hooks
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../11_ui/" class="md-tabs__link">
+          
+  
+    
+  
+  UI Toolkit
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../contributing/" class="md-tabs__link">
+        
+  
+    
+  
+  Contributing
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../whats-new/" class="md-tabs__link">
+        
+  
+    
+  
+  What's New
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Dialpad AI Playbook" class="md-nav__button md-logo" aria-label="Dialpad AI Playbook" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 1 9 9l-8 3 8 3 3 8 3-8 8-3-8-3-3-8Z"/></svg>
+
+    </a>
+    Dialpad AI Playbook
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ulisesmartins/ai-playbook" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ulisesmartins/ai-playbook
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Start
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Start
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../00_getting-started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../00_getting-started/DP-General-ai-mindset/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI Mindset
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--GA"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../00_getting-started/DP-General-tools-and-landscape/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tools & Landscape
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--GA"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../00_getting-started/DP-General-dev-environment-setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dev Environment
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--GA"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../00_getting-started/DP-General-terminal-basics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Terminal Basics
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--GA"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../00_getting-started/DP-General-github-overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GitHub Overview
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--GA"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../00_getting-started/DP-General-ai-agent-best-practices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI Agent Best Practices
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--GA"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../directory/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Directory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Context
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Context
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../company/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Company
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Product Areas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pdlc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PDLC
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../personas-and-icps/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Personas & ICPs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../design-system/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Design System
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../codebase-map/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Codebase Map
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Templates
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Templates
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02_templates/pm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02_templates/ui/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02_templates/cross-functional/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cross-functional
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Skills
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Skills
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../03_skills/pm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../03_skills/ui/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../03_skills/coding/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Coding
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../03_skills/cross-functional/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cross-functional
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Agents
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Agents
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../04_agents/pm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../04_agents/ui/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../04_agents/coding/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Coding
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../04_agents/cross-functional/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cross-functional
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Prompts
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Prompts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../05_prompts/pm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../05_prompts/ui/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../05_prompts/coding/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Coding
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Cowork
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Cowork
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../06_cowork-plugins/DP-General-cowork-overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--GA"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../06_cowork-plugins/DP-General-cowork-getting-started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Start
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--GA"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../06_cowork-plugins/pm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../06_cowork-plugins/ui/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../06_cowork-plugins/coding/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Coding
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../06_cowork-plugins/cross-functional/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cross-functional
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Examples
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Examples
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../07_examples/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_10_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_2" id="__nav_10_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    PM
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_2">
+            <span class="md-nav__icon md-icon"></span>
+            PM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../07_examples/pm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    None
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_10_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_2_2" id="__nav_10_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    PRD Examples
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_10_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            PRD Examples
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../07_examples/pm/prd-examples/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    None
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../07_examples/pm/prd-examples/DP-PM-prd-ai-coaching-summary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI Coaching Summary
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--GA"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../07_examples/pm/prd-examples/Support-PM-prd-concurrent-licensing-login-gate/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Concurrent Licensing Login Gate
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_10_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_2_3" id="__nav_10_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    GTM Brief Examples
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_10_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            GTM Brief Examples
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../07_examples/pm/gtm-examples/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    None
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../07_examples/pm/gtm-examples/DP-PM-gtm-ai-coaching-summary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI Coaching Summary
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--GA"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../07_examples/ui/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../07_examples/coding/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Coding
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../07_examples/cross-functional/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cross-functional
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Tools
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            Tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../08_tools/pm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../08_tools/ui/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../08_tools/coding/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Coding
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../08_tools/cross-functional/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cross-functional
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../08_tools/best-practices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Best Practices
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../08_tools/best-practices/DP-General-pilot-shell/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pilot Shell
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--GA"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    MCPs
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            MCPs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../09_mcps/guides/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setup Guides
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../09_mcps/guides/DP-General-atlassian-setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Atlassian
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--GA"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../09_mcps/guides/DP-General-github-setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GitHub
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--GA"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../09_mcps/guides/DP-General-design-studio-setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Design Studio
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--GA"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../09_mcps/guides/DP-General-glean-setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glean
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--GA"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../09_mcps/guides/DP-General-amplitude-setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Amplitude
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--GA"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../09_mcps/guides/DP-General-google-drive-setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Google Drive
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--GA"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../09_mcps/guides/DP-General-gmail-setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gmail
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--GA"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../09_mcps/guides/DP-General-google-calendar-setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Google Calendar
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--GA"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../09_mcps/guides/DP-General-google-bigquery-setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Google BigQuery
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--GA"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../09_mcps/guides/DP-General-monday-setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Monday.com
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--GA"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../09_mcps/guides/DP-General-dialtone-setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dialtone
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--GA"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../09_mcps/guides/DP-General-playwright-setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Playwright
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--GA"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Hooks
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            Hooks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../10_hooks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_13_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_13_2" id="__nav_13_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    PM
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_13_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13_2">
+            <span class="md-nav__icon md-icon"></span>
+            PM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../10_hooks/pm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    None
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../10_hooks/pm/DP-General-auto-save-prd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Auto-Save PRD
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--GA"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../10_hooks/pm/DP-General-jira-push/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JIRA Push
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--GA"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_13_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_13_3" id="__nav_13_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Coding
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_13_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13_3">
+            <span class="md-nav__icon md-icon"></span>
+            Coding
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../10_hooks/coding/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    None
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../10_hooks/coding/DP-General-lint-on-edit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lint on Edit
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--GA"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../10_hooks/coding/DP-General-test-feedback/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Test Feedback
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--GA"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_13_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_13_4" id="__nav_13_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    UI
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_13_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13_4">
+            <span class="md-nav__icon md-icon"></span>
+            UI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../10_hooks/ui/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    None
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../10_hooks/ui/DP-General-figma-export/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Figma Export
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--GA"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_13_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_13_5" id="__nav_13_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Cross-functional
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_13_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13_5">
+            <span class="md-nav__icon md-icon"></span>
+            Cross-functional
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../10_hooks/cross-functional/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    None
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../10_hooks/cross-functional/DP-General-notify-slack/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Notify Slack
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--GA"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    UI Toolkit
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14">
+            <span class="md-nav__icon md-icon"></span>
+            UI Toolkit
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../11_ui/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../11_ui/DP-Design-figma-101/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Figma at Dialpad
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../11_ui/DP-Design-jira-for-product-design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Jira for Product Design
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../11_ui/DP-Design-ux-heuristics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UX Heuristics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../11_ui/DP-Design-research-tools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Research Tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../11_ui/DP-Design-content-design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Content Design
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../11_ui/DP-Design-resources-for-managers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Resources for Managers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../11_ui/DP-Design-design-tools-repo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Design Tools Repo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../11_ui/DP-Design-git-github-guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git & GitHub
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../11_ui/DP-Design-product-designer-resources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Designer Resources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../11_ui/DP-Design-design-tenets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Design Tenets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../contributing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contributing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../whats-new/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What's New
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/ulisesmartins/ai-playbook/edit/master/01_context/product-areas/Support-context.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/ulisesmartins/ai-playbook/raw/master/01_context/product-areas/Support-context.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5Z"/></svg>
+    </a>
+  
+
+
+<h1 id="support-core-area-grounding-context">Support Core Area — Grounding Context<a class="headerlink" href="#support-core-area-grounding-context" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>Dialpad Support is a core Dialpad product.</strong> It is one of three primary commercial products in the Dialpad suite — alongside Dialpad Connect (UCaaS) and Dialpad Sell (sales engagement) — and is sold, marketed, and developed as a first-class product line under the Dialpad brand.</p>
+</blockquote>
+<h2 id="1-what-dialpad-support-is">1. What Dialpad Support Is<a class="headerlink" href="#1-what-dialpad-support-is" title="Permanent link">&para;</a></h2>
+<p>Dialpad Support is Dialpad's AI-powered CCaaS (Contact Center as a Service) product. It provides omnichannel customer support with voice, digital engagement (chat, SMS, email, social), AI-driven coaching, automated quality management, and deep analytics — all unified with Dialpad Connect (UCaaS) in a single TrueCaaS platform.</p>
+<p><strong>One-liner:</strong> AI-powered contact center software with live AI coaching, real-time sentiment tracking, omnichannel engagement, and integrated analytics for customer support teams.</p>
+<p><strong>Strategic outcome:</strong> Strong alternative to Nice, Genesys, and Five9.</p>
+<hr />
+<h2 id="2-product-packaging-tiers">2. Product Packaging &amp; Tiers<a class="headerlink" href="#2-product-packaging-tiers" title="Permanent link">&para;</a></h2>
+<h3 id="dialpad-support-bundles">Dialpad Support Bundles<a class="headerlink" href="#dialpad-support-bundles" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Tier</th>
+<th>CSR ID</th>
+<th>Description</th>
+<th>Key Included Features</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Essentials</td>
+<td><code>dpcc_bundle_essentials</code></td>
+<td>AI-powered CC for SMB support teams</td>
+<td>Digital Engagement (1 channel), basic AI routing, real-time transcription, summaries</td>
+</tr>
+<tr>
+<td>Advanced</td>
+<td><code>dpcc_bundle_advanced</code></td>
+<td>Enterprise CC with advanced AI</td>
+<td>+ Live Coach, Quality Management (AI CSAT, AI Scorecards), Digital Engagement (all channels)</td>
+</tr>
+<tr>
+<td>Premium</td>
+<td><code>dpcc_bundle_premium</code></td>
+<td>Top-tier enterprise CC</td>
+<td>+ WFM, full QM suite, Business Intelligence, all engagement channels</td>
+</tr>
+</tbody>
+</table>
+<h3 id="fy27-packaging-refresh-in-progress">FY27 Packaging Refresh (In Progress)<a class="headerlink" href="#fy27-packaging-refresh-in-progress" title="Permanent link">&para;</a></h3>
+<p>Moving from feature-by-feature add-ons to value-based "containers":</p>
+<ul>
+<li><strong>Quality Management (QM):</strong> AI CSAT + AI Scorecards</li>
+<li><strong>Live Coach:</strong> AI Custom Moments, RTA, real-time suggestions</li>
+<li><strong>WFM:</strong> Forecasting, scheduling, adherence</li>
+</ul>
+<p>Essentials remains limited; Advanced gets QM + Live Coach included; Premium gets everything including WFM.</p>
+<h3 id="add-ons-support-specific">Add-Ons (Support-Specific)<a class="headerlink" href="#add-ons-support-specific" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Add-On</th>
+<th>Essentials</th>
+<th>Advanced</th>
+<th>Premium</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Live Coach (AI Custom Moments, RTA)</td>
+<td>Paid</td>
+<td>Included</td>
+<td>Included</td>
+</tr>
+<tr>
+<td>Quality Management (AI CSAT, Scorecards)</td>
+<td>Paid</td>
+<td>Included</td>
+<td>Included</td>
+</tr>
+<tr>
+<td>WFM</td>
+<td>Paid</td>
+<td>Paid</td>
+<td>Included</td>
+</tr>
+<tr>
+<td>Digital Engagement (1 Channel)</td>
+<td>Included</td>
+<td>Included</td>
+<td>Included</td>
+</tr>
+<tr>
+<td>Digital Engagement (All Channels)</td>
+<td>Paid</td>
+<td>Included</td>
+<td>Included</td>
+</tr>
+<tr>
+<td>Unlimited Domestic Minutes</td>
+<td>Paid</td>
+<td>Paid</td>
+<td>Paid</td>
+</tr>
+<tr>
+<td>Voicemail Drop CC</td>
+<td>Paid</td>
+<td>Paid</td>
+<td>Paid</td>
+</tr>
+<tr>
+<td>CC Local Dialing</td>
+<td>Paid</td>
+<td>Paid</td>
+<td>Paid</td>
+</tr>
+<tr>
+<td>BI Add-On</td>
+<td>Paid</td>
+<td>Paid</td>
+<td>Paid</td>
+</tr>
+<tr>
+<td>Recordings &amp; Transcripts (1yr)</td>
+<td>Paid</td>
+<td>Paid</td>
+<td>Included</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="3-feature-inventory">3. Feature Inventory<a class="headerlink" href="#3-feature-inventory" title="Permanent link">&para;</a></h2>
+<h3 id="contact-center-core">Contact Center Core<a class="headerlink" href="#contact-center-core" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Routing:</strong> Longest idle, round robin, fixed order, random order, skills-based routing, queue priority</li>
+<li><strong>IVR:</strong> Advanced multi-level auto attendant with customizable open/closed/holiday hours routing</li>
+<li><strong>Queues:</strong> Hold queues with delay announcements, caller position, exit-to-voicemail, callback requests</li>
+<li><strong>Agent Management:</strong> On-duty/off-duty status, wrap-up time, dispositions, call waiting, agent screen capture</li>
+<li><strong>Supervisory Tools:</strong> Real-time monitoring (listen, barge, takeover), live transcriptions for supervisors, real-time dashboards, status alerts</li>
+<li><strong>Call Features:</strong> Call transfer, call parking (personal lines), manual and automatic recording</li>
+<li><strong>Capacity:</strong> Up to 500 contact centers per account; up to 25 simultaneous ring (expanding to 50+ for enterprise)</li>
+</ul>
+<h3 id="departments-vs-contact-centers">Departments vs. Contact Centers<a class="headerlink" href="#departments-vs-contact-centers" title="Permanent link">&para;</a></h3>
+<p>Departments offer basic routing (longest idle, round robin, fixed order, simultaneous). Contact Centers add: skills-based routing, queue priority, advanced hold queue, real-time dashboards, alerts, CSAT, dispositions, wrap-up time, agent screen capture, and all AI features (RTA, Playbooks, AI CSAT, Scorecards, sentiment, custom moments).</p>
+<h3 id="ai-features-contact-center-only">AI Features (Contact Center Only)<a class="headerlink" href="#ai-features-contact-center-only" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Real-Time Transcription</td>
+<td>Live transcription of calls with speaker diarization</td>
+</tr>
+<tr>
+<td>AI Recaps</td>
+<td>Post-call summaries with action items</td>
+</tr>
+<tr>
+<td>AI CSAT</td>
+<td>Survey-free inferred customer satisfaction scoring</td>
+</tr>
+<tr>
+<td>AI Scorecards</td>
+<td>Automated/accelerated QA reviews</td>
+</tr>
+<tr>
+<td>AI Playbooks</td>
+<td>Real-time adherence tracking for defined call flows</td>
+</tr>
+<tr>
+<td>Real-Time Assist (RTA)</td>
+<td>Triggered guidance cards during live interactions</td>
+</tr>
+<tr>
+<td>AI Live Coach</td>
+<td>Real-time coaching overlay with custom moments and suggestions</td>
+</tr>
+<tr>
+<td>Custom Moments</td>
+<td>Keyword/phrase tracking for compliance and coaching</td>
+</tr>
+<tr>
+<td>Live Call Sentiment</td>
+<td>Real-time sentiment analysis during calls</td>
+</tr>
+<tr>
+<td>Speech Coaching</td>
+<td>Talk-to-listen ratio, filler words, talk speed</td>
+</tr>
+<tr>
+<td>AI Voice Isolation</td>
+<td>Background noise suppression</td>
+</tr>
+</tbody>
+</table>
+<h3 id="omnichannel-digital-engagement">Omnichannel / Digital Engagement<a class="headerlink" href="#omnichannel-digital-engagement" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Channels:</strong> WebChat, SMS/MMS, Email, Facebook, Instagram, X/Twitter, WhatsApp</li>
+<li><strong>Agent Desktop:</strong> Unified workspace for voice + digital with shared customer history</li>
+<li><strong>Agentic AI:</strong> GA autonomous voice + chat agents with human handoff</li>
+<li><strong>Digital Engagement Licensing:</strong> One-channel or all-channels add-on</li>
+</ul>
+<h3 id="analytics">Analytics<a class="headerlink" href="#analytics" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Canned Reports:</strong> Call history, queue health, callbacks, Power Dialer, agent productivity, AI agent analytics</li>
+<li><strong>Real-Time Dashboard:</strong> Live wallboard with queue stats, agent status, SLA metrics</li>
+<li><strong>Scheduled Reporting:</strong> Automated report delivery</li>
+<li><strong>Playlists:</strong> Curated call recording collections for coaching</li>
+<li><strong>Key Metrics:</strong> Wait time, service level, abandon threshold, disposition usage, CSAT results, agent status</li>
+<li><strong>AI Analytics:</strong> Agentic AI performance (deflection rate, success rate, AHT comparison, ROI calculator)</li>
+</ul>
+<h3 id="workforce-management-wfm">Workforce Management (WFM)<a class="headerlink" href="#workforce-management-wfm" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Forecasting:</strong> Call volume prediction</li>
+<li><strong>Scheduling:</strong> Automated agent schedule generation</li>
+<li><strong>Adherence Tracking:</strong> Real-time adherence monitoring (market-leading capability)</li>
+<li><strong>Shrinkage Management:</strong> Account for breaks, training, admin time</li>
+<li><strong>FY27 Pivot:</strong> Moving from planning-oriented features to real-time workforce optimization — intraday reforecasting, agent redeployment, dynamic response to actual conditions</li>
+<li><strong>Agentic Integration:</strong> WFM calculates how many human agents are needed based on actual AI agent performance</li>
+<li><strong>Target:</strong> $7.6M ARR</li>
+</ul>
+<hr />
+<h2 id="4-fy27-strategic-priorities">4. FY27 Strategic Priorities<a class="headerlink" href="#4-fy27-strategic-priorities" title="Permanent link">&para;</a></h2>
+<h3 id="overarching-vision">Overarching Vision<a class="headerlink" href="#overarching-vision" title="Permanent link">&para;</a></h3>
+<p>Treat Support + Analytics + AI as a single, cohesive platform investment — not a collection of disconnected features. Customers evaluate Support as an operational platform, not individual features.</p>
+<h3 id="four-strategic-pillars">Four Strategic Pillars<a class="headerlink" href="#four-strategic-pillars" title="Permanent link">&para;</a></h3>
+<h4 id="pillar-1-scalable-contact-center-foundations">Pillar 1: Scalable Contact Center Foundations<a class="headerlink" href="#pillar-1-scalable-contact-center-foundations" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Advanced multi-skill routing model (replace simplistic skills-based routing that creates CC explosion)</li>
+<li>Expand phone number limit per CC</li>
+<li>Skill-based routing improvements</li>
+<li>More simultaneous ring capacity</li>
+<li>Merged identity: single customer profile across voice, SMS, email, chat channels</li>
+<li>Scheduled callbacks improvements</li>
+</ul>
+<h4 id="pillar-2-unified-actionable-analytics">Pillar 2: Unified, Actionable Analytics<a class="headerlink" href="#pillar-2-unified-actionable-analytics" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Unified analytics with consistent definitions across voice and digital</li>
+<li>Design analytics for personas (agent, supervisor, executive), not as raw data dumps</li>
+<li>Agentic AI observability: closed feedback loop where insights drive improvement</li>
+<li>Cross-channel AI insights</li>
+</ul>
+<h4 id="pillar-3-trustworthy-global-ai">Pillar 3: Trustworthy, Global AI<a class="headerlink" href="#pillar-3-trustworthy-global-ai" title="Permanent link">&para;</a></h4>
+<ul>
+<li>PII redaction GA across transcripts and audio with full admin controls</li>
+<li>Multilingual AI parity: 10+ languages with automatic language detection</li>
+<li>AI CSAT expansion to outbound, direct numbers, and digital interactions</li>
+<li>AI insight that surfaces conversation trends and root causes</li>
+</ul>
+<h4 id="pillar-4-innovation-with-ai">Pillar 4: Innovation with AI<a class="headerlink" href="#pillar-4-innovation-with-ai" title="Permanent link">&para;</a></h4>
+<ul>
+<li>LLM-powered scorecards</li>
+<li>Prescriptive recommended actions from AI insights</li>
+<li>Agentic AI analytics (deflection rate, success rate, AHT benchmarks, ROI)</li>
+</ul>
+<hr />
+<h2 id="5-key-metrics-targets">5. Key Metrics &amp; Targets<a class="headerlink" href="#5-key-metrics-targets" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Overall Support ARR</td>
+</tr>
+<tr>
+<td>Enterprise Support ARR</td>
+</tr>
+<tr>
+<td>Feature adoption (CSAT, Scorecards)</td>
+</tr>
+<tr>
+<td>Feature-related escalations</td>
+</tr>
+<tr>
+<td>Enterprise churn</td>
+</tr>
+<tr>
+<td>Omnichannel customers</td>
+</tr>
+<tr>
+<td>Digital sessions</td>
+</tr>
+<tr>
+<td>Digital Agents ARR</td>
+</tr>
+<tr>
+<td>Billable Sessions ARR</td>
+</tr>
+<tr>
+<td>WFM ARR</td>
+</tr>
+</tbody>
+</table>
+<h3 id="q4-fy26-winloss-contact-center">Q4 FY26 Win/Loss (Contact Center)<a class="headerlink" href="#q4-fy26-winloss-contact-center" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Average lost deal is 2–3x the won deal — enterprise gap is real</li>
+<li>Product-controllable loss themes: concurrent licensing, predictive dialer depth, MS Teams integration, BPO multi-tenancy, omnichannel email queueing</li>
+</ul>
+<blockquote>
+<p><strong>Thesis:</strong> "We win and retain on value, not feature parity; customers who see better quality and efficiency outcomes are stickier and expand more."</p>
+</blockquote>
+<hr />
+<h2 id="6-known-gaps-limitations">6. Known Gaps &amp; Limitations<a class="headerlink" href="#6-known-gaps-limitations" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Gap</th>
+<th>Impact</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Concurrent licensing</td>
+<td>Enterprise deals lost</td>
+<td>Under evaluation</td>
+</tr>
+<tr>
+<td>Predictive/power dialer depth</td>
+<td>Lost to Five9, Genesys</td>
+<td>Power Dialer GA in Q1 FY27</td>
+</tr>
+<tr>
+<td>MS Teams integration depth</td>
+<td>Lost to competitors</td>
+<td>Roadmap item</td>
+</tr>
+<tr>
+<td>BPO multi-tenancy</td>
+<td>Blocks BPO market segment</td>
+<td>Under evaluation</td>
+</tr>
+<tr>
+<td>Omnichannel email queueing</td>
+<td>Lost to Zoom, Five9</td>
+<td>FY27 priority</td>
+</tr>
+<tr>
+<td>Skills-based routing simplicity</td>
+<td>CC explosion problem at scale</td>
+<td>Pillar 1 priority</td>
+</tr>
+<tr>
+<td>Phone number limit per CC (30)</td>
+<td>Blocks enterprise marketing use cases</td>
+<td>Expanding to ~200</td>
+</tr>
+<tr>
+<td>Identity fragmentation</td>
+<td>Same customer appears as multiple contacts across channels</td>
+<td>Merged identity in FY27</td>
+</tr>
+<tr>
+<td>AI language coverage</td>
+<td>Limited non-English support</td>
+<td>10+ languages target</td>
+</tr>
+<tr>
+<td>POC instability</td>
+<td>90% of wins require live POC; instability is top deal-killer</td>
+<td>Reliability investments</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="7-competitive-context-support-specific">7. Competitive Context (Support-Specific)<a class="headerlink" href="#7-competitive-context-support-specific" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Competitor</th>
+<th>Threat</th>
+<th>Support-Specific Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Genesys</td>
+<td>🔴 High</td>
+<td>Enterprise depth, WEM suite, integration strength (Salesforce+ServiceNow), token-based AI pricing</td>
+</tr>
+<tr>
+<td>NICE CXone</td>
+<td>🔴 High</td>
+<td>Breadth (WFM, QM, recording), Enlighten AI suite, Cognigy acquisition for agentic</td>
+</tr>
+<tr>
+<td>Five9</td>
+<td>🟠 Medium</td>
+<td>Strong outbound/dialer, analyst recognition, lacks simultaneous ring</td>
+</tr>
+<tr>
+<td>Talkdesk</td>
+<td>🟠 Medium</td>
+<td>Digital engagement, industry packages</td>
+</tr>
+<tr>
+<td>Zoom</td>
+<td>🟠 Medium</td>
+<td>Price competitive, grabbing CCaaS churners</td>
+</tr>
+<tr>
+<td>Nextiva</td>
+<td>🟠 Medium</td>
+<td>Enterprise push, winning some table-stakes RFPs</td>
+</tr>
+</tbody>
+</table>
+<h3 id="where-support-wins">Where Support Wins<a class="headerlink" href="#where-support-wins" title="Permanent link">&para;</a></h3>
+<ul>
+<li>AI native and included in base (not token-based or add-on)</li>
+<li>Unified UCaaS+CCaaS (TrueCaaS)</li>
+<li>Real-time coaching during live calls</li>
+<li>Faster deployment (2 months vs. 12 months with Genesys)</li>
+<li>AI CSAT (survey-free) — unique differentiator</li>
+</ul>
+<hr />
+<h2 id="8-agentic-ai-in-support-context">8. Agentic AI in Support Context<a class="headerlink" href="#8-agentic-ai-in-support-context" title="Permanent link">&para;</a></h2>
+<p>Agentic AI is both a standalone product and a capability within Support:</p>
+<ul>
+<li>AI Agents handle the majority of support requests; humans focus on edge cases</li>
+<li>Human transfer is positioned as a trust-building feature, not a failure</li>
+<li>Agentic AI Agents escalate to human agents on the same platform seamlessly</li>
+<li>WFM calculates human agent needs based on actual AI agent performance</li>
+<li>Analytics track AI vs. human performance side-by-side (deflection, FCR, AHT, CSAT)</li>
+</ul>
+<h3 id="key-agentic-metrics">Key Agentic Metrics<a class="headerlink" href="#key-agentic-metrics" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Deflection rate</td>
+<td>Contained vs. escalated interactions</td>
+</tr>
+<tr>
+<td>Success rate</td>
+<td>Deflection × CSAT</td>
+</tr>
+<tr>
+<td>AI AHT vs. Human AHT</td>
+<td>Average handle time comparison</td>
+</tr>
+<tr>
+<td>Skills usage</td>
+<td>Skill gap identification</td>
+</tr>
+<tr>
+<td>ROI calculator</td>
+<td>Agent hours saved, cost per interaction</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="9-related-context-files">9. Related Context Files<a class="headerlink" href="#9-related-context-files" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Scope</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>DP-General-mission-and-strategy.md</code></td>
+<td>Company-level mission, all Core Areas, FY27 imperatives</td>
+</tr>
+<tr>
+<td><code>DP-General-competitive-positioning.md</code></td>
+<td>Full competitive landscape, win/loss patterns, AI feature matrix</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="10-how-to-use-this-file">10. How to Use This File<a class="headerlink" href="#10-how-to-use-this-file" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>PRDs:</strong> Load this file when drafting any Support, CC, Omnichannel, WFM, or AI+Support PRD to ground requirements in actual capabilities, packaging, and strategic direction.</li>
+<li><strong>Competitive analysis:</strong> For Support-specific competitive context; pair with <code>DP-General-competitive-positioning.md</code> for the full landscape.</li>
+<li><strong>Packaging/pricing work:</strong> For current tier definitions, add-on eligibility, and FY27 repack direction.</li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.path", "navigation.top", "navigation.indexes", "navigation.footer", "toc.follow", "toc.integrate", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.action.edit", "content.action.view", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.cd18aaf1.min.js"></script>
+      
+        <script src="../../../stylesheets/role-filter.js?v=83e5e27"></script>
+      
+        <script src="../../../javascripts/extra.js?v=83e5e27"></script>
+      
+    
+  </body>
+</html>

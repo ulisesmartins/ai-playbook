@@ -1,0 +1,910 @@
+/* ==========================================================
+   Dialpad AI Playbook — extra.css
+   Design system: oklch color space, spring motion, fluid type
+   ========================================================== */
+
+/* ── 1. Design tokens (light mode) ── */
+:root,
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color:        #7C52FF;
+  --md-primary-fg-color--light: #9B7FFF;
+  --md-primary-fg-color--dark:  #5A35D9;
+  --md-accent-fg-color:         #7C52FF;
+
+  --dp-color-brand:        oklch(55% 0.22 295);
+  --dp-color-brand-subtle: oklch(95% 0.06 295);
+  --dp-color-brand-strong: oklch(42% 0.24 295);
+  --dp-color-brand-glow:   oklch(55% 0.22 295 / 0.22);
+
+  --dp-surface-base:    oklch(99% 0 0);
+  --dp-surface-raised:  oklch(100% 0 0);
+  --dp-surface-overlay: oklch(100% 0 0 / 0.85);
+  --dp-surface-nav:     oklch(14% 0.03 295);
+
+  --dp-text-primary:   oklch(15% 0 0);
+  --dp-text-secondary: oklch(45% 0 0);
+  --dp-text-muted:     oklch(65% 0 0);
+  --dp-text-brand:     oklch(55% 0.22 295);
+  --dp-text-brand-alt: oklch(42% 0.24 295);
+
+  --dp-border-default: oklch(88% 0 0);
+  --dp-border-subtle:  oklch(93% 0 0);
+  --dp-border-brand:   oklch(55% 0.22 295);
+  --dp-border-brand-a: oklch(55% 0.22 295 / 0.18);
+
+  --dp-surface-brand-tint: oklch(95% 0.06 295);
+  --dp-shadow-brand:       oklch(55% 0.22 295 / 0.22);
+
+  --dp-ease-spring:   cubic-bezier(0.34, 1.3, 0.64, 1);
+  --dp-ease-spring-s: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --dp-ease-out:      cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ── 2. Design tokens (dark mode) ── */
+[data-md-color-scheme="slate"] {
+  --md-default-bg-color:        oklch(10% 0 0);
+  --md-default-fg-color:        oklch(93% 0 0);
+  --md-default-fg-color--light: oklch(65% 0 0);
+  --md-primary-fg-color:        oklch(72% 0.18 295);
+  --md-primary-fg-color--light: oklch(82% 0.14 295);
+  --md-primary-fg-color--dark:  oklch(55% 0.22 295);
+  --md-accent-fg-color:         oklch(72% 0.18 295);
+  --md-code-bg-color:           oklch(14% 0.03 295);
+  --md-code-fg-color:           oklch(88% 0.08 295);
+  --md-typeset-a-color:         oklch(72% 0.18 295);
+
+  --dp-color-brand:        oklch(72% 0.18 295);
+  --dp-color-brand-subtle: oklch(18% 0.06 295);
+  --dp-color-brand-strong: oklch(82% 0.14 295);
+  --dp-color-brand-glow:   oklch(72% 0.18 295 / 0.25);
+
+  --dp-surface-base:    oklch(10% 0 0);
+  --dp-surface-raised:  oklch(14% 0 0);
+  --dp-surface-overlay: oklch(14% 0 0 / 0.85);
+  --dp-surface-nav:     oklch(8% 0.03 295);
+
+  --dp-text-primary:   oklch(93% 0 0);
+  --dp-text-secondary: oklch(65% 0 0);
+  --dp-text-muted:     oklch(45% 0 0);
+  --dp-text-brand:     oklch(72% 0.18 295);
+  --dp-text-brand-alt: oklch(82% 0.14 295);
+
+  --dp-border-default: oklch(22% 0 0);
+  --dp-border-subtle:  oklch(17% 0 0);
+  --dp-border-brand:   oklch(62% 0.2 295);
+  --dp-border-brand-a: oklch(62% 0.2 295 / 0.2);
+
+  --dp-surface-brand-tint: oklch(18% 0.06 295);
+  --dp-shadow-brand:       oklch(55% 0.22 295 / 0.18);
+}
+
+/* ── 3. Header ── */
+.md-header {
+  background: var(--dp-color-brand);
+  box-shadow: 0 2px 16px var(--dp-shadow-brand);
+}
+
+[data-md-color-scheme="slate"] .md-header {
+  background: var(--dp-surface-nav);
+  border-bottom: 1px solid var(--dp-border-brand-a);
+  box-shadow: none;
+}
+
+.md-header__title { font-weight: 700; letter-spacing: -0.01em; }
+
+/* ── 4. Navigation tabs ── */
+.md-tabs { background: var(--dp-color-brand-strong); }
+
+[data-md-color-scheme="slate"] .md-tabs {
+  background: var(--dp-surface-nav);
+  border-bottom: 1px solid var(--dp-border-brand-a);
+}
+
+/* Allow all tabs to show — scroll horizontally if they overflow */
+.md-tabs__list {
+  justify-content: center;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.md-tabs__list::-webkit-scrollbar { display: none; }
+
+/* Widen the grid constraint inside the tab bar so all tabs are visible */
+.md-tabs .md-grid { max-width: 100%; }
+
+/* Tighten tab item spacing so more tabs fit before scrolling kicks in */
+.md-tabs__item { padding: 0 0.6rem; }
+
+.md-tabs__link--active,
+.md-tabs__link:hover { color: #fff !important; opacity: 1; }
+
+.md-tabs__link--active::after { background: oklch(100% 0 0 / 0.9); }
+
+/* ── 5. Sidebar nav ── */
+.md-nav__link--active { color: var(--dp-text-brand) !important; font-weight: 600; }
+.md-nav__link:hover   { color: var(--dp-text-brand); transition: color 120ms ease; }
+
+/* ── 6. Hero section ── */
+.dp-hero {
+  background: linear-gradient(
+    135deg,
+    var(--dp-color-brand) 0%,
+    var(--dp-color-brand-strong) 55%,
+    oklch(25% 0.18 295) 100%
+  );
+  border-radius: 16px;
+  padding: clamp(1.5rem, 3vw, 2rem) clamp(1rem, 3vw, 1.75rem);
+  text-align: center;
+  margin: 0 0 2rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.dp-hero::before {
+  content: ''; position: absolute;
+  top: -40%; left: -15%; width: 55%; height: 180%;
+  background: radial-gradient(ellipse, oklch(100% 0 0 / 0.08) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.dp-hero::after {
+  content: ''; position: absolute;
+  bottom: -25%; right: -8%; width: 50%; height: 140%;
+  background: radial-gradient(ellipse, var(--dp-color-brand-glow) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+[data-md-color-scheme="slate"] .dp-hero {
+  background: linear-gradient(
+    135deg,
+    oklch(42% 0.24 295) 0%,
+    oklch(25% 0.18 295) 55%,
+    var(--dp-surface-nav) 100%
+  );
+  border: 1px solid var(--dp-border-brand-a);
+}
+
+.dp-hero .md-typeset,
+.dp-hero p,
+.dp-hero h1,
+.dp-hero strong { color: #fff !important; }
+
+.dp-hero .dp-eyebrow {
+  font-size: 0.72rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.14em !important;
+  text-transform: uppercase !important;
+  color: oklch(100% 0 0 / 0.6) !important;
+  margin: 0 0 1rem 0 !important;
+  opacity: 1 !important;
+  line-height: 1 !important;
+}
+
+.dp-hero h1 {
+  font-size: clamp(1.5rem, 2.5vw + 0.75rem, 2.1rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.5rem;
+  border-bottom: none !important;
+  text-shadow: 0 2px 16px oklch(0% 0 0 / 0.28);
+}
+
+.dp-hero p:not(.dp-eyebrow) {
+  font-size: clamp(0.9rem, 1vw + 0.7rem, 1rem);
+  opacity: 0.88;
+  max-width: 520px;
+  margin: 0 auto 1.25rem;
+  line-height: 1.65;
+}
+
+.dp-hero .md-typeset h1 .headerlink,
+.dp-hero h1 .headerlink { display: none !important; }
+
+/* ── 7. Buttons ── */
+.md-typeset .md-button {
+  border-radius: 8px;
+  font-weight: 600;
+  min-height: 38px;
+  transition:
+    transform 120ms var(--dp-ease-spring),
+    box-shadow 150ms ease,
+    background 150ms ease,
+    border-color 150ms ease;
+}
+
+.md-typeset .md-button:focus-visible {
+  outline: 3px solid var(--dp-border-brand);
+  outline-offset: 3px;
+}
+
+.md-typeset .md-button--primary {
+  background: linear-gradient(135deg, var(--dp-color-brand) 0%, var(--dp-color-brand-strong) 100%);
+  border-color: transparent;
+  color: #fff;
+  box-shadow: 0 4px 16px var(--dp-shadow-brand);
+}
+
+.md-typeset .md-button--primary:hover {
+  box-shadow: 0 6px 22px var(--dp-shadow-brand);
+  transform: scale(1.02) translateY(-1px);
+}
+
+.md-typeset .md-button--primary:active {
+  transform: scale(0.97);
+  box-shadow: 0 2px 8px var(--dp-shadow-brand);
+}
+
+.dp-hero .md-typeset .md-button--primary {
+  background: #fff;
+  color: var(--dp-color-brand-strong) !important;
+  border-color: transparent;
+  box-shadow: 0 4px 20px oklch(0% 0 0 / 0.22);
+}
+
+.dp-hero .md-typeset .md-button--primary:hover {
+  background: oklch(97% 0.04 295);
+  transform: scale(1.02) translateY(-2px);
+  box-shadow: 0 8px 28px oklch(0% 0 0 / 0.28);
+}
+
+.dp-hero .md-typeset .md-button--hero {
+  background: oklch(100% 0 0 / 0.14);
+  color: #fff !important;
+  border: 2px solid oklch(100% 0 0 / 0.55);
+  backdrop-filter: blur(4px);
+  text-shadow: 0 1px 4px oklch(0% 0 0 / 0.3);
+}
+
+.dp-hero .md-typeset .md-button--hero:hover {
+  background: oklch(100% 0 0 / 0.24);
+  border-color: oklch(100% 0 0 / 0.8);
+  transform: scale(1.01) translateY(-1px);
+}
+
+.md-typeset .md-button:not(.md-button--primary):not(.md-button--hero) {
+  background: transparent;
+  color: var(--dp-text-brand) !important;
+  border: 2px solid var(--dp-border-brand-a);
+}
+
+.md-typeset .md-button:not(.md-button--primary):not(.md-button--hero):hover {
+  border-color: var(--dp-border-brand);
+  background: var(--dp-surface-brand-tint);
+}
+
+.md-typeset p:has(> a.md-button) {
+  display: flex; flex-wrap: wrap;
+  gap: 0.75rem; margin-top: 1.5rem; margin-bottom: 0.5rem;
+}
+
+.dp-hero .md-typeset p:has(> a.md-button) {
+  justify-content: center; margin-top: 1.5rem;
+}
+
+/* ── 8. Grid cards — 3-column layout ── */
+.md-typeset .grid.cards {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 1rem !important;
+  margin: 1em 0;
+}
+
+.md-typeset .grid.cards > ul,
+.md-typeset .grid.cards > ol {
+  display: contents !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.md-typeset .grid.cards > ul > li,
+.md-typeset .grid.cards > ol > li {
+  list-style: none !important;
+  border: 1px solid var(--dp-border-brand-a);
+  border-radius: 12px;
+  padding: 1rem 1.1rem;
+  background: var(--dp-surface-raised);
+  box-shadow:
+    0 1px 3px oklch(0% 0 0 / 0.06),
+    0 4px 12px oklch(0% 0 0 / 0.04);
+  transition:
+    transform 200ms var(--dp-ease-spring),
+    box-shadow 200ms ease,
+    border-color 200ms ease;
+  animation: dp-reveal 320ms var(--dp-ease-out) both;
+}
+
+.md-typeset .grid.cards > ul > li:nth-child(1)  { animation-delay:  40ms; }
+.md-typeset .grid.cards > ul > li:nth-child(2)  { animation-delay:  80ms; }
+.md-typeset .grid.cards > ul > li:nth-child(3)  { animation-delay: 120ms; }
+.md-typeset .grid.cards > ul > li:nth-child(4)  { animation-delay: 160ms; }
+.md-typeset .grid.cards > ul > li:nth-child(5)  { animation-delay: 200ms; }
+.md-typeset .grid.cards > ul > li:nth-child(6)  { animation-delay: 240ms; }
+.md-typeset .grid.cards > ul > li:nth-child(7)  { animation-delay: 280ms; }
+.md-typeset .grid.cards > ul > li:nth-child(8)  { animation-delay: 320ms; }
+.md-typeset .grid.cards > ul > li:nth-child(9)  { animation-delay: 360ms; }
+.md-typeset .grid.cards > ul > li:nth-child(10) { animation-delay: 400ms; }
+.md-typeset .grid.cards > ul > li:nth-child(11) { animation-delay: 440ms; }
+.md-typeset .grid.cards > ul > li:nth-child(12) { animation-delay: 480ms; }
+.md-typeset .grid.cards > ul > li:nth-child(13) { animation-delay: 520ms; }
+
+[data-md-color-scheme="slate"] .md-typeset .grid.cards > ul > li,
+[data-md-color-scheme="slate"] .md-typeset .grid.cards > ol > li {
+  background: var(--dp-surface-raised);
+  box-shadow:
+    0 1px 3px oklch(0% 0 0 / 0.3),
+    0 4px 16px oklch(0% 0 0 / 0.2);
+}
+
+.md-typeset .grid.cards > ul > li:hover,
+.md-typeset .grid.cards > ol > li:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow:
+    0 4px 16px oklch(0% 0 0 / 0.08),
+    0 12px 36px var(--dp-shadow-brand);
+  border-color: var(--dp-border-brand);
+}
+
+.md-typeset .grid.cards > ul > li .lg,
+.md-typeset .grid.cards > ol > li .lg {
+  font-size: 1.4rem;
+  color: var(--dp-text-brand);
+}
+
+@media (max-width: 960px) {
+  .md-typeset .grid.cards { grid-template-columns: repeat(2, 1fr) !important; }
+}
+
+@media (max-width: 600px) {
+  .md-typeset .grid.cards { grid-template-columns: 1fr !important; }
+}
+
+/* ── 9. Inline code ── */
+.md-typeset code {
+  background: var(--dp-surface-brand-tint);
+  color: var(--dp-text-brand-alt);
+  border-radius: 4px;
+  padding: 0.1em 0.4em;
+  font-size: 0.85em;
+}
+
+[data-md-color-scheme="slate"] .md-typeset code {
+  background: var(--dp-surface-brand-tint);
+  color: var(--dp-text-brand);
+}
+
+/* ── 10. Tables ── */
+.md-typeset table:not([class]) {
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--dp-border-brand-a);
+}
+
+.md-typeset table:not([class]) th {
+  background: var(--dp-surface-brand-tint);
+  color: var(--dp-text-brand-alt);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-bottom: 2px solid var(--dp-border-brand-a);
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(8px);
+}
+
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) th {
+  background: var(--dp-surface-brand-tint);
+  color: var(--dp-text-brand);
+}
+
+.md-typeset table:not([class]) td { border-bottom: 1px solid var(--dp-border-subtle); }
+.md-typeset table:not([class]) tr:hover td { background: oklch(55% 0.22 295 / 0.04); }
+
+/* ── 11. Tabs (pymdownx.tabbed) ── */
+.md-typeset .tabbed-labels > label { font-weight: 600; transition: color 150ms ease; }
+.md-typeset .tabbed-labels > label:hover { color: var(--dp-text-brand); }
+.md-typeset .tabbed-labels > label.tabbed-label--active { color: var(--dp-text-brand); }
+.md-typeset .tabbed-labels > label.tabbed-label--active::after {
+  background: var(--dp-color-brand);
+  border-radius: 2px 2px 0 0;
+}
+
+/* ── 12. Admonitions ── */
+.md-typeset .admonition,
+.md-typeset details { border-radius: 10px; border-left: 4px solid var(--dp-color-brand); }
+
+.md-typeset .admonition-title,
+.md-typeset summary { background: var(--dp-surface-brand-tint) !important; font-weight: 600; }
+
+/* ── 13. Search highlight ── */
+.md-search__scrollwrap mark {
+  background: oklch(55% 0.22 295 / 0.18);
+  color: inherit;
+  border-radius: 2px;
+}
+
+/* ── 14. Footer ── */
+.md-footer { background: var(--dp-color-brand-strong); }
+
+[data-md-color-scheme="slate"] .md-footer {
+  background: var(--dp-surface-nav);
+  border-top: 1px solid var(--dp-border-brand-a);
+}
+
+.md-footer-meta { background: oklch(0% 0 0 / 0.15); }
+
+/* ── 15. Custom badges ── */
+.dp-badge {
+  display: inline-flex; align-items: center;
+  padding: 0.15em 0.6em; border-radius: 999px;
+  font-size: 0.72em; font-weight: 700;
+  letter-spacing: 0.03em; line-height: 1.6;
+  text-transform: uppercase; vertical-align: middle;
+}
+
+.dp-badge--ga {
+  background: oklch(58% 0.18 155 / 0.12);
+  color: oklch(40% 0.16 155);
+  border: 1px solid oklch(58% 0.18 155 / 0.28);
+}
+
+[data-md-color-scheme="slate"] .dp-badge--ga {
+  background: oklch(58% 0.18 155 / 0.10);
+  color: oklch(68% 0.16 155);
+  border-color: oklch(58% 0.18 155 / 0.25);
+}
+
+.dp-badge--wip {
+  background: oklch(75% 0.18 85 / 0.12);
+  color: oklch(48% 0.16 60);
+  border: 1px solid oklch(75% 0.18 85 / 0.28);
+}
+
+[data-md-color-scheme="slate"] .dp-badge--wip {
+  background: oklch(75% 0.18 85 / 0.10);
+  color: oklch(80% 0.16 85);
+  border-color: oklch(75% 0.18 85 / 0.25);
+}
+
+.dp-badge--new {
+  background: oklch(55% 0.22 295 / 0.10);
+  color: var(--dp-text-brand-alt);
+  border: 1px solid var(--dp-border-brand-a);
+}
+
+[data-md-color-scheme="slate"] .dp-badge--new {
+  background: oklch(55% 0.22 295 / 0.12);
+  color: var(--dp-text-brand);
+  border-color: var(--dp-border-brand-a);
+}
+
+/* ── 16. Scrollbar (webkit) ── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--dp-border-brand-a); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--dp-color-brand); }
+
+/* ── 17. Article headings ── */
+.md-typeset h1 {
+  font-size: clamp(1.6rem, 2vw + 1rem, 2.25rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--dp-text-brand-alt);
+}
+
+[data-md-color-scheme="slate"] .md-typeset h1 { color: var(--dp-text-brand); }
+
+.md-typeset h2 {
+  font-size: clamp(1.1rem, 1vw + 0.75rem, 1.35rem);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  border-bottom: 2px solid var(--dp-border-brand-a);
+  padding-bottom: 0.3em;
+  margin-bottom: 1em;
+}
+
+.dp-hero .md-typeset h1,
+.dp-hero h1 { color: #fff !important; border-bottom: none !important; padding-bottom: 0; }
+
+/* ── 18. Links ── */
+.md-typeset a:not(.md-button):not(.md-nav__link):not(.md-tabs__link) {
+  color: var(--dp-text-brand);
+  text-decoration: none;
+  border-bottom: 1px solid var(--dp-border-brand-a);
+  transition: border-color 150ms ease, color 150ms ease;
+}
+
+.md-typeset a:not(.md-button):not(.md-nav__link):not(.md-tabs__link):hover {
+  border-bottom-color: var(--dp-border-brand);
+  color: var(--dp-text-brand-alt);
+}
+
+[data-md-color-scheme="slate"] .md-typeset a:not(.md-button):not(.md-nav__link):not(.md-tabs__link):hover {
+  color: var(--dp-text-brand);
+  border-bottom-color: var(--dp-border-brand);
+}
+
+.dp-hero .md-typeset a:not(.md-button) {
+  color: oklch(100% 0 0 / 0.9);
+  border-bottom-color: oklch(100% 0 0 / 0.3);
+}
+
+/* ── 19. Content area ── */
+.md-grid { max-width: 1400px; }
+
+/* ── 20. Announcement bar ── */
+.md-banner {
+  background: linear-gradient(90deg, var(--dp-color-brand-strong) 0%, var(--dp-color-brand) 100%);
+  color: #fff; font-size: 0.78rem; font-weight: 500;
+  text-align: center; padding: 0.4em 1em;
+}
+
+.md-banner a { color: #fff !important; text-decoration: underline !important; border: none !important; }
+
+/* ── 21. Breadcrumbs ── */
+.md-path { opacity: 0.65; font-size: 0.75rem; }
+.md-path__item + .md-path__item::before { color: var(--dp-border-brand-a); }
+
+/* ── 22. Icon SVG sizing fix ── */
+.md-typeset .twemoji svg,
+.md-icon svg { height: 1em; width: auto; fill: currentcolor; }
+
+.md-typeset .grid.cards .twemoji.lg svg { height: 1.4rem; width: 1.4rem; }
+
+/* ── 23. Focus rings (WCAG 2.2) ── */
+.md-typeset a:focus-visible,
+.md-search__input:focus-visible,
+.md-button:focus-visible {
+  outline: 3px solid var(--dp-border-brand);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ── 24. Animations ── */
+@keyframes dp-reveal {
+  from { opacity: 0; translate: 0 14px; }
+  to   { opacity: 1; translate: 0 0;    }
+}
+
+/* ── 25. Reduced motion kill switch ── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ── 26. Hide ¶ anchor links globally ── */
+.md-typeset .headerlink { display: none !important; }
+
+/* ── 27. Clickable repository tree ── */
+.dp-tree-wrap {
+  margin: 1em 0;
+}
+
+.dp-tree-wrap pre {
+  font-family: var(--md-code-font-family, "SFMono-Regular", "Consolas", monospace);
+  font-size: 0.8rem;
+  line-height: 1.8;
+  background: var(--dp-surface-brand-tint);
+  border: 1px solid var(--dp-border-brand-a);
+  border-radius: 10px;
+  padding: 1.25rem 1.5rem;
+  overflow-x: auto;
+  color: var(--dp-text-primary);
+  white-space: pre;
+}
+
+[data-md-color-scheme="slate"] .dp-tree-wrap pre {
+  background: var(--dp-surface-brand-tint);
+  color: var(--dp-text-primary);
+}
+
+/* Links inside tree — no underline border, just color */
+.dp-tree-wrap pre a {
+  color: var(--dp-text-brand) !important;
+  text-decoration: none !important;
+  border-bottom: none !important;
+  transition: color 120ms ease, text-decoration 120ms ease;
+}
+
+.dp-tree-wrap pre a:hover {
+  text-decoration: underline !important;
+  color: var(--dp-color-brand-strong) !important;
+}
+
+[data-md-color-scheme="slate"] .dp-tree-wrap pre a { color: var(--dp-text-brand) !important; }
+[data-md-color-scheme="slate"] .dp-tree-wrap pre a:hover { color: var(--dp-text-brand-alt) !important; }
+
+/* ── 28. Hero logo — Dialpad wordmark ── */
+.dp-hero-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 0 auto 0.75rem;
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
+
+.dp-hero-logo-mark {
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+  display: block;
+}
+
+.dp-hero-logo-text {
+  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+/* ── 29. Logo above hero box ── */
+.dp-hero-logo--external {
+  width: fit-content;
+  margin: 0 auto 0.875rem;
+}
+
+.dp-hero-logo--external .dp-hero-logo-text {
+  color: var(--dp-text-primary);
+}
+
+/* ── 30. Role selector ── */
+.dp-role-filter {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  margin: 0.5rem 0 1.25rem;
+}
+
+.dp-role-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--dp-text-secondary);
+  white-space: nowrap;
+}
+
+.dp-role-select {
+  appearance: none;
+  -webkit-appearance: none;
+  padding: 0.375rem 2.25rem 0.375rem 0.875rem;
+  background-color: var(--dp-surface-raised);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%237C52FF' d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.5rem center;
+  background-size: 1.2em;
+  border: 1.5px solid var(--dp-border-brand-a);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--dp-text-primary);
+  cursor: pointer;
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+  min-width: 200px;
+}
+
+.dp-role-select:hover {
+  border-color: var(--dp-border-brand);
+}
+
+.dp-role-select:focus {
+  outline: none;
+  border-color: var(--dp-border-brand);
+  box-shadow: 0 0 0 3px var(--dp-shadow-brand);
+}
+
+[data-md-color-scheme="slate"] .dp-role-select {
+  background-color: var(--dp-surface-raised);
+}
+
+/* ── 31. Role content panels ── */
+.dp-role-content {
+  display: none;
+}
+
+.dp-role-content.dp-role-active {
+  display: block;
+}
+
+/* ── 32. Role picker — custom pill dropdown (global, all pages) ── */
+.dp-role-picker {
+  position: relative;
+  margin-left: 1.25rem;
+  margin-right: 0.5rem;
+  flex-shrink: 0;
+  z-index: 50;
+}
+
+.dp-role-trigger {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 9px 5px 13px;
+  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.96);
+  border: none;
+  cursor: pointer;
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: oklch(42% 0.24 295);
+  white-space: nowrap;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.18), 0 1px 2px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 150ms ease, transform 120ms ease, background 100ms ease;
+  line-height: 1;
+  letter-spacing: -0.01em;
+}
+
+.dp-role-trigger:hover {
+  background: #fff;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.22), 0 2px 4px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+}
+
+.dp-role-trigger:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.14);
+}
+
+.dp-role-chevron {
+  width: 14px;
+  height: 14px;
+  color: oklch(55% 0.22 295);
+  transition: transform 200ms ease;
+  flex-shrink: 0;
+}
+
+.dp-role-picker[data-open="true"] .dp-role-chevron {
+  transform: rotate(180deg);
+}
+
+.dp-role-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 195px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.16), 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 5px;
+  list-style: none;
+  margin: 0;
+  z-index: 200;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px) scale(0.97);
+  transform-origin: top right;
+  transition: opacity 160ms ease, transform 160ms ease, visibility 160ms ease;
+}
+
+.dp-role-picker[data-open="true"] .dp-role-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+
+.dp-role-option {
+  display: flex;
+  align-items: center;
+  padding: 9px 13px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: "DM Sans", sans-serif;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: oklch(20% 0 0);
+  transition: background 100ms ease, color 100ms ease;
+  list-style: none;
+}
+
+.dp-role-option:hover {
+  background: oklch(94% 0.07 295);
+  color: oklch(42% 0.24 295);
+}
+
+.dp-role-option[aria-selected="true"] {
+  font-weight: 700;
+  color: oklch(42% 0.24 295);
+  background: oklch(91% 0.09 295);
+}
+
+/* Dark mode */
+[data-md-color-scheme="slate"] .dp-role-trigger {
+  background: rgba(255, 255, 255, 0.11);
+  color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+[data-md-color-scheme="slate"] .dp-role-trigger:hover {
+  background: rgba(255, 255, 255, 0.19);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+[data-md-color-scheme="slate"] .dp-role-chevron {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+[data-md-color-scheme="slate"] .dp-role-dropdown {
+  background: oklch(16% 0.04 295);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), 0 2px 8px rgba(0, 0, 0, 0.3);
+  border: 1px solid oklch(28% 0.08 295);
+}
+
+[data-md-color-scheme="slate"] .dp-role-option {
+  color: oklch(85% 0 0);
+}
+
+[data-md-color-scheme="slate"] .dp-role-option:hover {
+  background: oklch(22% 0.08 295);
+  color: oklch(82% 0.14 295);
+}
+
+[data-md-color-scheme="slate"] .dp-role-option[aria-selected="true"] {
+  background: oklch(24% 0.10 295);
+  color: oklch(82% 0.14 295);
+}
+
+/* Hide on tablet/mobile — header is too cramped */
+@media screen and (max-width: 76.1875em) {
+  .dp-role-picker { display: none; }
+}
+
+
+/* ── 33. Dark/light toggle — improve visibility ── */
+.md-header__option .md-header__button {
+  color: rgba(255, 255, 255, 0.95) !important;
+  opacity: 1 !important;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  transition: background 150ms ease, transform 120ms ease;
+}
+
+.md-header__option .md-header__button:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: scale(1.08);
+}
+
+.md-header__option .md-header__button svg {
+  width: 20px;
+  height: 20px;
+}
+
+[data-md-color-scheme="slate"] .md-header__option .md-header__button {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+[data-md-color-scheme="slate"] .md-header__option .md-header__button:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* ── 34. Compact section cards — truncate descriptions ── */
+.md-typeset .grid.cards > ul > li > p:nth-of-type(2) {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 0.5rem;
+}
+
+/* Remove excessive spacing inside cards */
+.md-typeset .grid.cards > ul > li {
+  padding: 0.75rem 1rem;
+}
+
+.md-typeset .grid.cards > ul > li > hr {
+  margin: 0.5rem 0;
+}
+
+/* Make card link compact */
+.md-typeset .grid.cards > ul > li > p:last-child {
+  margin-bottom: 0;
+  margin-top: auto;
+}
