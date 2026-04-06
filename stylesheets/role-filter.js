@@ -50,22 +50,18 @@
 
   /* ── Detect site base path (e.g. "/ai-playbook/") ── */
 
-  var BASE = (function () {
-    var base = document.querySelector('link[rel="canonical"]');
-    if (base) {
-      try { var u = new URL(base.href); return u.pathname.replace(/[^/]*$/, ''); } catch (e) {}
+  function getBase() {
+    /* The site logo/title link always resolves to the site root */
+    var logo = document.querySelector('a.md-header__button');
+    if (logo) {
+      try { return new URL(logo.href).pathname.replace(/\/?$/, '/'); } catch (e) {}
     }
-    /* Fallback: infer from the first <script> whose src contains role-filter */
-    var scripts = document.querySelectorAll('script[src*="role-filter"]');
-    if (scripts.length) {
-      var src = scripts[0].getAttribute('src');
-      var idx = src.indexOf('stylesheets/');
-      if (idx > 0) return src.substring(0, idx);
-    }
-    /* Last resort: extract from pathname by matching known section pattern */
-    var m = window.location.pathname.match(/^(\/[^/]+\/)?(?:(?:0[0-9]|1[0-9])_)/);
-    return m && m[1] ? m[1] : '/';
-  })();
+    /* Fallback: strip known section patterns from the current path */
+    var path = window.location.pathname;
+    var m = path.match(/^(.*?\/?)(?:(?:0[0-9]|1[0-9])_)/);
+    if (m) return m[1];
+    return path.replace(/\/?$/, '/');
+  }
 
   /* ── Helpers ── */
 
@@ -107,7 +103,7 @@
       if (!dest) continue;
 
       /* Rewrite the href to the role-appropriate path, prepending site base */
-      a.setAttribute('href', BASE + dest.replace(/^\//, ''));
+      a.setAttribute('href', getBase() + dest.replace(/^\//, ''));
     }
   }
 
@@ -142,7 +138,7 @@
     if (navigate) {
       var section = extractSection(window.location.pathname);
       if (section && NAV_MAP[section]) {
-        var dest = BASE + NAV_MAP[section][role].replace(/^\//, '');
+        var dest = getBase() + NAV_MAP[section][role].replace(/^\//, '');
         if (dest && window.location.pathname.indexOf(dest) === -1) {
           window.location.href = dest;
         }
