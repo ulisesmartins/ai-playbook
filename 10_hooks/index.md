@@ -56,7 +56,7 @@ The `matcher` is a regex tested against the tool name (e.g. `Write`, `Edit`, `Ba
 
     Run linter and tests after every file edit. Feed results back to Claude Code automatically.
 
-    [:octicons-arrow-right-24: Engineering hooks](engineering/DP-General-lint-on-edit.md)
+    [:octicons-arrow-right-24: Engineering hooks](coding/DP-General-lint-on-edit.md)
 
 -   :material-pencil-ruler:{ .lg .middle } **Design Hooks**
 
@@ -64,7 +64,7 @@ The `matcher` is a regex tested against the tool name (e.g. `Write`, `Edit`, `Ba
 
     Trigger Design Studio exports and archive design specs when Claude Code writes a component spec.
 
-    [:octicons-arrow-right-24: Design hooks](design/DP-General-figma-export.md)
+    [:octicons-arrow-right-24: Design hooks](ui/DP-General-figma-export.md)
 
 -   :material-account-group:{ .lg .middle } **Cross-functional Hooks**
 

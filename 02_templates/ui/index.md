@@ -33,4 +33,4 @@ Standardized output shapes for Designers. Use as Claude output targets or starti
 ---
 
 !!! tip "Using templates with Claude"
-    Paste the template into Claude with the prompt: *"Fill in this design brief for [feature]."* Or use the [UI Brief](../../03_skills/design/DP-General-design-brief.md) skill which targets this template automatically.
+    Paste the template into Claude with the prompt: *"Fill in this design brief for [feature]."* Or use the [UI Brief](../../03_skills/ui/DP-General-design-brief.md) skill which targets this template automatically.

@@ -20,7 +20,7 @@ Annotated reference outputs from real-world AI-assisted work at Dialpad. Use the
 
     <span class="dp-badge dp-badge--new">Coming soon</span>
 
-    [:octicons-arrow-right-24: Browse](design/)
+    [:octicons-arrow-right-24: Browse](ui/)
 
 -   :material-code-braces:{ .lg .middle } **Engineering Examples**
 
@@ -30,7 +30,7 @@ Annotated reference outputs from real-world AI-assisted work at Dialpad. Use the
 
     <span class="dp-badge dp-badge--new">Coming soon</span>
 
-    [:octicons-arrow-right-24: Browse](engineering/)
+    [:octicons-arrow-right-24: Browse](coding/)
 
 -   :material-account-group:{ .lg .middle } **Cross-functional Examples**
 

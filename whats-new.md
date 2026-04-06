@@ -20,7 +20,7 @@ Latest updates to the AI Playbook. Newest first.
 ---
 
 **2026-03-27** &mdash; New "Pilot Shell" best-practices guide added to Engineering tools &mdash; covers spec-driven development (`/spec`), TDD-enforced quality hooks, rule generation (`/setup-rules`), reusable skill creation (`/create-skill`), persistent memory, smart model routing, and the local Pilot Shell Console dashboard. Includes Dialpad-specific integration guidance for web-clients and firespotter repos.
-[→ View best practices](08_tools/best-practices/DP-General-pilot-shell.md) · [→ View engineering tools](08_tools/engineering/DP-General-tools.md)
+[→ View best practices](08_tools/best-practices/DP-General-pilot-shell.md) · [→ View engineering tools](08_tools/coding/DP-General-tools.md)
 
 ---
 
